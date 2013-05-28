@@ -9,7 +9,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 */
 
 #pragma once
-#include "headers\sqlite3.h"
 
 namespace Sqlite
 {
@@ -92,5 +91,6 @@ namespace Sqlite
         static Platform::String^ sqlite3_column_text(Statement^ statement, int index);
         static Platform::Array<uint8>^ sqlite3_column_blob(Statement^, int index);
         static int sqlite3_column_bytes(Statement^ statement, int index);
+        static int sqlite3_enable_load_extension(Database^ db, int onoff);
     };
 }
